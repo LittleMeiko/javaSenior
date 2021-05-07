@@ -1,5 +1,5 @@
 # IntelliJ project files
-#.idea
+.idea
 #*.iml
 out
 gen
@@ -12,6 +12,6 @@ gen
 /target/
 #/.gitignore
 /user-profile-analysis.iml
-#/.idea
+/.idea/
 /README.md
 .DS_Store
