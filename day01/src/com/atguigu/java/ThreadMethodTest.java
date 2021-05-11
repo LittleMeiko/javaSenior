@@ -8,7 +8,7 @@ package com.atguigu.java;
  * 4.getName()：获取当前线程的名字
  * 5.setName()：设置当前线程的名字
  * 6.yield()：释放当前线程cpu的执行权
- * 7.join()：在线程a中调用线程b的join()，此时线程a将进入阻塞状态，直到线程b执行完后线程b才结束阻塞状态，等待cpu再次分配时间片
+ * 7.join()：在线程a中调用线程b的join()，此时线程a将进入阻塞状态，直到线程b执行完后线程a才结束阻塞状态，等待cpu再次分配时间片
  * 8.stop()：已过时。当执行此方法时强制结束当前线程。
  * 9.sleep(long millitime)：让当前线程睡眠睡眠指定的millitime毫秒，在指定的millitime毫秒时间内，当前线程是阻塞状态
  * 10.isAlive()：判断当前线程是否存活
