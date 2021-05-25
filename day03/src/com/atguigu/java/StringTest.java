@@ -1,7 +1,6 @@
 package com.atguigu.java;
 
 import org.junit.Test;
-import org.omg.Messaging.SyncScopeHelper;
 
 /**
  *  常用类：String
