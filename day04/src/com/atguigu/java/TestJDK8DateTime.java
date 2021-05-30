@@ -14,7 +14,7 @@ import java.util.Date;
  * 为什么JDK8要推出新的日期时间API：
  *  1.可变性：日期和时间这样的类应该是不可变的，但在Calendar中设置后会改变原来的日期
  *  2.偏移性：Date中的年份都是从1900年开始的，月份都是从0开始的，使用不方便
- *  3.格式化：格式化只对Date有用，而Calend不行
+ *  3.格式化：格式化只对Date有用，而Calendar不行
  *  4.线程安全问题：Date和Calendar不是线程安全的，而且也不能处理闰秒
  *
  * @author Meiko
