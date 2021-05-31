@@ -44,7 +44,7 @@ public class EnumTest {
     }
 }
 
-enum SeasonEnum implements Test{
+enum SeasonEnum implements demo{
     //1.提供当前枚举类的多个对象
     SPRING("春天", "穿暖花开"){
         @Override
@@ -105,6 +105,6 @@ enum SeasonEnum implements Test{
 //    }
 }
 
-interface Test {
+interface demo {
     void show();
 }
