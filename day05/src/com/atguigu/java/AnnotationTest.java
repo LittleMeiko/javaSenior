@@ -11,9 +11,9 @@ import java.util.ArrayList;
  *
  * 元注解：对现有的注解进行解释说明的注解
  *   1.Retention：用于指定Annotation的生命周期，包含一个RetentionPolicy类型的成员变量
- *      RetentionPolicy.SOURCE：在源文件中有效，编译器会直接丢弃这种策略的注释
- *      RetentionPolicy.CLASS：在class文件中有效，当运行Java程序时，JVM不会保留注释(默认值)
- *      RetentionPolicy.RUNTIME：在运行时有效，当运行Java程序时，JVM会保留注释，程序可以通过反射获取该注释
+ *      RetentionPolicy.SOURCE：在源文件中有效，编译器会直接丢弃这种策略的注解
+ *      RetentionPolicy.CLASS：在class文件中有效，当运行Java程序时，JVM不会保留注解(默认值)
+ *      RetentionPolicy.RUNTIME：在运行时有效，当运行Java程序时，JVM会保留注解，程序可以通过反射获取该注解
  *   2.Target：用于指定被修饰的注解能用于修饰哪些程序元素
  *   3.Documented：用于指定被该元注解修饰的注解类将被javadoc工具提取成文档，默认情况下javadoc是不包括注解的
  *      定义为Documented的注解必须设置Retention值为RUNTIME
