@@ -1,5 +1,11 @@
 package com.atguigu.java;
 
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * List接口的相关实现类：ArrayList、LinkedList、Vector
  *
@@ -37,5 +43,49 @@ package com.atguigu.java;
  */
 public class ListTest {
 
+    @Test
+    public void test2() {
+        ArrayList list = new ArrayList();
+        list.add(123);
+        list.add(456);
+        list.add("AA");
+        list.add(new Person("Tom", 12));
+        list.add(456);
 
+        int index = list.indexOf(456);
+        System.out.println(index);
+        int lastIndexOf = list.lastIndexOf(456);
+        System.out.println(lastIndexOf);
+
+        Object remove = list.remove(0);
+        System.out.println(remove);
+        System.out.println(list.toString());
+
+        Object cc = list.set(0, "CC");
+        System.out.println(cc);
+        System.out.println(list.toString());
+
+        List list1 = list.subList(2, 4);
+        System.out.println(list1.toString());
+        System.out.println(list.toString());
+    }
+
+    @Test
+    public void test1() {
+        ArrayList list = new ArrayList();
+        list.add(123);
+        list.add(456);
+        list.add("AA");
+        list.add(new Person("Tom", 12));
+        list.add(456);
+        System.out.println(list.toString());
+
+        list.add(1,789);
+        System.out.println(list.toString());
+        List list1 = Arrays.asList(1, 2, 3);
+        list.addAll(list1);
+        System.out.println(list.size());
+        System.out.println(list.toString());
+        System.out.println(list.get(0));
+    }
 }
