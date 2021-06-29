@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -37,11 +38,37 @@ import java.util.List;
  *    在JDK7和JDK8中通过Vector()构造方法创建对象时，都创建了一个长度为10的Object[] elementData数组
  *    在扩容方面，默认为扩容为原来数组长度的2倍
  *
+ * 4.ArrayList常用方法：增、删、改、查、插、长度、遍历
  *
  * @author Meiko
  * @date 2021-06-03
  */
 public class ListTest {
+
+    @Test
+    public void test3() {
+        ArrayList list = new ArrayList();
+        list.add(123);
+        list.add(456);
+        list.add("AA");
+        //1.迭代器遍历
+        Iterator it = list.iterator();
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+        System.out.println("*********************");
+
+        //2.增强for循环
+        for (Object obj : list) {
+            System.out.println(obj);
+        }
+        System.out.println("*********************");
+
+        //3.普通循环
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+    }
 
     @Test
     public void test2() {
