@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
@@ -20,6 +21,29 @@ import java.util.Set;
  *
  */
 public class SetTest {
+
+    /**
+     * LinkedHashSet可以按照元素添加的顺序遍历元素(作为HashSet的子类，在添加数据的同时，
+     * 每个数据还维护了两个引用，记录此数据的前一个数据和后一个数据)
+     *
+     * 对于频繁的遍历操作，LinkedHashSet的效率要比HashSet高
+     *
+     */
+    @Test
+    public void test2() {
+        Set set = new LinkedHashSet();
+        set.add(123);
+        set.add(456);
+        set.add("AA");
+        set.add(new Person("Tom", 12));
+        set.add("CC");
+        set.add(789);
+
+        Iterator it = set.iterator();
+        while(it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
 
     /**
      * 一、Set接口：存储无序的、不可重复的数据
