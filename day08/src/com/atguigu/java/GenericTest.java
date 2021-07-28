@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * 泛型的使用：JDK5.0新增的特性
@@ -60,5 +61,14 @@ public class GenericTest {
          * 但运行时只有一个ArrayList被加载到JVM中
          */
         // list1 = list2;
+    }
+
+    // 测试泛型方法
+    @Test
+    public void test5() {
+        Order<String> order = new Order<>();
+        Integer[] arr = new Integer[]{1,2,3,4};
+        List<Integer> list = order.copyArrayToList(arr);
+        System.out.println(list);
     }
 }
