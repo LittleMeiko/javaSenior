@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.Objects;
 
 /**
- *
+ * 文件输入、输出流
  *
  * @author Meiko
  * @date 2021-07-30
