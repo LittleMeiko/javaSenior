@@ -45,9 +45,7 @@ class MyInvocationHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("我替超人接广告...");
         Object returnValue = method.invoke(obj, args);
-        System.out.println("我替超人做广告...");
         return returnValue;
     }
 }
@@ -59,6 +57,8 @@ public class ProxyTest {
         Human proxy = (Human) ProxyFactory.getProxyInstance(superMan);
         //String belief = proxy.getBelief();
         //System.out.println(belief);
+        System.out.println("我替超人接广告...");
         proxy.eat("牛肉");
+        System.out.println("我替超人做广告...");
     }
 }
