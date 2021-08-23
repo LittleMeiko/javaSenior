@@ -13,6 +13,7 @@ interface Human {
     void eat(String food);
 }
 
+//被代理类
 class SuperMan implements Human {
 
     @Override
@@ -26,6 +27,7 @@ class SuperMan implements Human {
     }
 }
 
+//获取代理类的工厂
 class ProxyFactory {
 
     public static Object getProxyInstance(Object obj) {
