@@ -47,6 +47,9 @@ public class StreamAPITest {
     //创建Stream的方式四：创建无限流
     @Test
     public void test4() {
+        //迭代
         Stream.iterate(0, t -> t + 2).limit(10).forEach(System.out :: println);
+
+        Stream.generate(Math :: random).limit(10).forEach(System.out :: println);
     }
 }
